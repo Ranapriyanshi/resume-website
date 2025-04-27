@@ -1,0 +1,93 @@
+:root {
+    --clr-grey: #cbd5e1;
+    --clr-blue: #2563eb;
+  }
+  
+  .experience-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding: 200px 60px 40px 280px;
+    background: #ffffff;
+  }
+  
+  .timeline {
+    position: relative;
+    width: 6px;
+    background: transparent;
+  }
+  
+  .timeline ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    width: 4px;
+  }
+  
+  .default-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: var(--clr-grey);
+    z-index: 1;
+  }
+  
+  .draw-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 0;
+  background: var(--clr-blue);
+  z-index: 2;
+  transition: height 0.5s ease; /* Smooth slow animation */
+}
+
+  
+  .timeline li {
+    position: relative;
+    width: 4px;
+    margin: 0 auto;
+    /* height: 400px; */
+    background: transparent;
+  }
+  
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--clr-grey);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 5;
+  }
+  
+  .timeline li.in-view::before {
+    background: var(--clr-blue);
+    transform: translateX(-50%) scale(1.4);
+  }
+  
+  .content {
+    position: relative;
+    left: 50px;
+    top: -20px;
+    width: 60vw;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+
+}
+
+.content:hover{
+    transform: scale(1.02);
+}
+
