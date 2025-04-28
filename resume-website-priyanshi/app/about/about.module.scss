@@ -1,0 +1,26 @@
+/* page.module.scss */
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  background-color: #ffffff;
+}
+
+.sectionStyle {
+  max-width: 800px;
+  text-align: left;
+}
+
+.headingStyle {
+  font-size: 36px;
+  color: #111111;
+  margin-bottom: 20px;
+}
+
+.paragraphStyle {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
